@@ -24,7 +24,6 @@ THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
-
 */
 
 //more or less stolen from a script in http://pastie.org/462639# by Paul Irish and an article from smashing magazine: http://coding.smashingmagazine.com/2010/05/23/make-your-own-bookmarklets-with-jquery/
@@ -35,7 +34,7 @@ DEALINGS IN THE SOFTWARE.
   if (window.jQuery === undefined || window.jQuery.fn.jquery < v) {
     var done = false;
     var script = document.createElement('script');
-    script.src = 'http://ajax.googleapis.com/ajax/libs/jquery/' + v + '/jquery.min.js';
+    script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/' + v + '/jquery.min.js';
     script.onload = script.onreadystatechange = function(){
       if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
         done = true;
@@ -50,7 +49,7 @@ DEALINGS IN THE SOFTWARE.
   function loadDraggable() {
     var done = false;
     var script = document.createElement('script');
-    script.src = 'http://code.jquery.com/ui/1.10.3/jquery-ui.js';
+    script.src = 'https://code.jquery.com/ui/1.10.3/jquery-ui.js';
     script.onload = script.onreadystatechange = function(){
       if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
         done = true;
